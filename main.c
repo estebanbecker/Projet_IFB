@@ -4,17 +4,19 @@
 int main() {
 
     grid table;
+    grid *ptable;
+
+    ptable=&table;
 
 
 
-
-    table = new_grid(3000);
+    new_grid(30,ptable);
 
 
 
 ;
 
-printf ("%c",table.data[1][1]);
+printf ("%c",(table).data[1][1]);
 
 
 }

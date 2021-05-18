@@ -7,9 +7,9 @@
 
 typedef struct{
     int side;
-    char data[25][25];
+    char **data;
 }grid;
 
-grid new_grid(int side);
+void new_grid(int side,grid *table);
 
 #endif //PROJET_IFB_TABLE_H

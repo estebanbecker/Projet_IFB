@@ -1,7 +1,20 @@
 #include <stdio.h>
+#include "table.h"
 
 int main() {
-    printf("C'est le projet d'IFB\n");
-    printf("Test fou de Yann je sais pas si ça marche\n"); //très fou
-    return 0;
+
+    grid table;
+
+
+
+
+    table = new_grid(3000);
+
+
+
+;
+
+printf ("%c",table.data[1][1]);
+
+
 }

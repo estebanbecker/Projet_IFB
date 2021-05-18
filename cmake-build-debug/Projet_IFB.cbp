@@ -77,6 +77,12 @@
 		<Unit filename="C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/main.c">
 			<Option target="Projet_IFB"/>
 		</Unit>
+		<Unit filename="C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/table.c">
+			<Option target="Projet_IFB"/>
+		</Unit>
+		<Unit filename="C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/table.h">
+			<Option target="Projet_IFB"/>
+		</Unit>
 		<Unit filename="C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

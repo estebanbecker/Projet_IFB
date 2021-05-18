@@ -8,26 +8,25 @@
 #include <stdio.h>
 
 
-grid new_grid(int n){
+void new_grid(int n,grid *table){
 
-    grid table;
 
-    table.side=n;
+    (*table).side=n;
 
-    table.data = (char **)malloc(n * sizeof(int *));
-    if (table.data == NULL){
+    (*table).data = (char **)malloc(n * sizeof(int *));
+    if ((*table).data == NULL){
         printf("\nEchec lors de l'allocation memoire!!!");
     }
 
 
     for (int i=0;i<n;i++)
     {
-        table.data[i] = (char *)malloc(n * sizeof(int));
-        if (table.data[i] == NULL)
+        (*table).data[i] = (char *)malloc(n * sizeof(int));
+        if ((*table).data[i] == NULL)
         {
             for (int j=0;j<i;j++)
             {
-                free(table.data[j]);
+                free((*table).data[j]);
 
                 printf("\n Echec lors de l'allocation memoire!!!");
             }
@@ -38,9 +37,9 @@ grid new_grid(int n){
     {
         for(int j=0;j<n;j++)
         {
-            table.data[i][j]='-';
+            (*table).data[i][j]='-';
         }
     }
 
-    printf ("%c",table.data[1][1]);
+    printf ("%c",(*table).data[1][1]);
 }

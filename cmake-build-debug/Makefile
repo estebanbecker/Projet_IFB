@@ -141,6 +141,33 @@ Projet_IFB/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/build
 .PHONY : Projet_IFB/fast
 
+addtoken.obj: addtoken.c.obj
+
+.PHONY : addtoken.obj
+
+# target to build an object file
+addtoken.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/addtoken.c.obj
+.PHONY : addtoken.c.obj
+
+addtoken.i: addtoken.c.i
+
+.PHONY : addtoken.i
+
+# target to preprocess a source file
+addtoken.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/addtoken.c.i
+.PHONY : addtoken.c.i
+
+addtoken.s: addtoken.c.s
+
+.PHONY : addtoken.s
+
+# target to generate assembly for a file
+addtoken.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/addtoken.c.s
+.PHONY : addtoken.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -204,6 +231,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Projet_IFB
+	@echo ... addtoken.obj
+	@echo ... addtoken.i
+	@echo ... addtoken.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

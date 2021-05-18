@@ -3,19 +3,21 @@
 //
 
 #include "addtoken.h"
+#include "table.h"
 
-int tableau[10][10], i=0;
 
 
-int addtoken(int jeton, int input) {
-    while (tableau[i][input] != '-') {
+int addtoken(int jeton, int input, grid *pgrid) {
+    int i=0;
+    while ((*pgrid).data[i][input] != '-') {
         i = i + 1;
     }
-    tableau[i][input]=jeton;
+    (*pgrid).data[i][input]=jeton;
 }
 
-int removetoken(int jeton, int input){
-    while (tableau[i][input] != 'X' && tableau[i][input] != 'O'){
+int removetoken(int jeton, int input, grid *pgrid){
+    int i=0;
+    while ((*pgrid).data[i][input] != 'X' && (*pgrid).data[i][input] != 'O'){
         i=i+1;
     }
     int buffer_y = i;

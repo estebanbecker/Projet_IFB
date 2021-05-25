@@ -1,7 +1,7 @@
-#include <stdio.h>
 #include "table.h"
 #include "addtoken.h"
 #include "checkwinner.h"
+#include "save.h"
 
 int main() {
 
@@ -15,14 +15,15 @@ int main() {
 
 
 
-    new_grid(7,ptable);
+    new_grid(2,ptable);
 
-    addtoken('X',3,ptable);
+    addtoken('X',1,ptable);
     show_grid(table);
-    addtoken('O',5,ptable);
+    addtoken('O',1,ptable);
     show_grid(table);
-    addtoken('X',4,ptable);
+    addtoken('X',0,ptable);
     show_grid(table);
 
+    save('_',5,1,table,'a');
 
 }

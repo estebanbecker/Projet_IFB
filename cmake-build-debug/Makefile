@@ -222,6 +222,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/main.c.s
 .PHONY : main.c.s
 
+save.obj: save.c.obj
+
+.PHONY : save.obj
+
+# target to build an object file
+save.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/save.c.obj
+.PHONY : save.c.obj
+
+save.i: save.c.i
+
+.PHONY : save.i
+
+# target to preprocess a source file
+save.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/save.c.i
+.PHONY : save.c.i
+
+save.s: save.c.s
+
+.PHONY : save.s
+
+# target to generate assembly for a file
+save.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/save.c.s
+.PHONY : save.c.s
+
 table.obj: table.c.obj
 
 .PHONY : table.obj
@@ -267,6 +294,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... save.obj
+	@echo ... save.i
+	@echo ... save.s
 	@echo ... table.obj
 	@echo ... table.i
 	@echo ... table.s

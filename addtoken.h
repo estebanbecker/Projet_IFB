@@ -7,6 +7,6 @@
 #include "table.h"
 
 int addtoken(char jeton, int input, grid *pgrid);
-int removetoken(int input, grid *pgrid);
+int removetoken(int input, grid *pgrid,int *buffer);
 
 #endif //PROJET_IFB_ADDTOKEN_H

@@ -9,6 +9,7 @@ CMakeFiles/Projet_IFB.dir/checkwinner.c.obj: ../checkwinner.c
 CMakeFiles/Projet_IFB.dir/checkwinner.c.obj: ../checkwinner.h
 
 CMakeFiles/Projet_IFB.dir/main.c.obj: ../addtoken.h
+CMakeFiles/Projet_IFB.dir/main.c.obj: ../checkwinner.h
 CMakeFiles/Projet_IFB.dir/main.c.obj: ../main.c
 CMakeFiles/Projet_IFB.dir/main.c.obj: ../table.h
 

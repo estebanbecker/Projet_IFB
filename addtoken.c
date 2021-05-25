@@ -3,7 +3,7 @@
 //
 
 #include "addtoken.h"
-#include "table.h"
+
 
 
 
@@ -13,14 +13,19 @@ int addtoken(char jeton, int input, grid *pgrid) {
         --i;
     }
     (*pgrid).data[i][input]=jeton;
+
+    return i;
 }
 
-int removetoken(int input, grid *pgrid){
+int removetoken(int input, grid *pgrid,int *buffer){
     int i=0;
     while ((*pgrid).data[i][input] != 'X' && (*pgrid).data[i][input] != 'O'){
         ++i;
 
     }
     (*pgrid).data[i][input] = '-';
-    return input;
+
+    *buffer=input;
+    return i;
+
 }

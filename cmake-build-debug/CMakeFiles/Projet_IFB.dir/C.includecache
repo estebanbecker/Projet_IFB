@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/addtoken.h
+table.h
+C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/table.h
+
+C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/checkwinner.h
+
+C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/main.c
+stdio.h
+-
+table.h
+C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/table.h
+addtoken.h
+C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/addtoken.h
+checkwinner.h
+C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/checkwinner.h
+
+C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/table.h
+

@@ -168,6 +168,33 @@ addtoken.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/addtoken.c.s
 .PHONY : addtoken.c.s
 
+checkwinner.obj: checkwinner.c.obj
+
+.PHONY : checkwinner.obj
+
+# target to build an object file
+checkwinner.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/checkwinner.c.obj
+.PHONY : checkwinner.c.obj
+
+checkwinner.i: checkwinner.c.i
+
+.PHONY : checkwinner.i
+
+# target to preprocess a source file
+checkwinner.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/checkwinner.c.i
+.PHONY : checkwinner.c.i
+
+checkwinner.s: checkwinner.c.s
+
+.PHONY : checkwinner.s
+
+# target to generate assembly for a file
+checkwinner.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/checkwinner.c.s
+.PHONY : checkwinner.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -234,6 +261,9 @@ help:
 	@echo ... addtoken.obj
 	@echo ... addtoken.i
 	@echo ... addtoken.s
+	@echo ... checkwinner.obj
+	@echo ... checkwinner.i
+	@echo ... checkwinner.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

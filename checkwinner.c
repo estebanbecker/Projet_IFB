@@ -2,7 +2,7 @@
 // Created by Yann Derré on 18/05/2021.
 //
 
-#include <printf.h>
+#include <stdio.h>
 #include "checkwinner.h"
 
 int tableau[10][10], input, aligned=1, i=0, n, consent=0;

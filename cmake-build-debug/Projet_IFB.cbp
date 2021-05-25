@@ -80,6 +80,12 @@
 		<Unit filename="C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/addtoken.h">
 			<Option target="Projet_IFB"/>
 		</Unit>
+		<Unit filename="C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/checkwinner.c">
+			<Option target="Projet_IFB"/>
+		</Unit>
+		<Unit filename="C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/checkwinner.h">
+			<Option target="Projet_IFB"/>
+		</Unit>
 		<Unit filename="C:/Users/esteb/OneDrive - Universite De Technologie De Belfort-Montbeliard/Cours/UTBM/TC02/IFB/Programmes/Projet_IFB/main.c">
 			<Option target="Projet_IFB"/>
 		</Unit>

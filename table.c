@@ -41,5 +41,45 @@ void new_grid(int n,grid *table){
         }
     }
 
-    printf ("%c",(*table).data[1][1]);
+}
+
+void show_grid(grid table){
+
+    int nb_char=1,mem=table.side+1,mem2;
+
+    while (mem>=10){
+        mem=mem/10;
+        ++nb_char;
+    }
+
+    for (int i = 0; i < table.side; ++i) {
+        printf("%d",i+1);
+        mem=i+1;
+        mem2=0;
+        while (mem>=10){
+            mem=mem/10;
+            ++mem2;
+        }
+
+        for (int j = 0; j < nb_char-mem2; ++j) {
+            printf(" ");
+        }
+    }
+
+    printf("\n");
+
+    for (int i = 0; i < table.side; ++i) {
+
+        for (int j = 0; j < table.side; ++j) {
+            printf("%c",table.data[i][j]);
+
+            for (int k = 0; k < nb_char; ++k) {
+                printf(" ");
+            }
+        }
+
+        printf("\n");
+
+    }
+
 }

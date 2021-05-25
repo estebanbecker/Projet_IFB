@@ -10,13 +10,8 @@ int main() {
 
 
 
-    new_grid(30,ptable);
+    new_grid(12,ptable);
 
 
-
-;
-
-printf ("%c",(table).data[1][1]);
-
-
+    show_grid(table);
 }

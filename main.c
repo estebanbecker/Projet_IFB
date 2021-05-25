@@ -23,7 +23,6 @@ int main() {
     show_grid(table);
     addtoken('X',4,ptable);
     show_grid(table);
-    checkligne('X', 2, 4, addtoken);
 
 
 }

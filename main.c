@@ -22,8 +22,8 @@ int main() {
     show_grid(table);
     addtoken('O',5,ptable);
     show_grid(table);
-    addtoken('X',5,ptable);
+    addtoken('X',4,ptable);
     show_grid(table);
-    printf("%d",checkdiag('X', 2, 10, 5, table));
+    printf("%d",checkcolonne('X', 2, 10, 4, table));
 
 }

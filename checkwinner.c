@@ -120,13 +120,13 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
 }
 
 int checkcolonne(char jeton, int n, int i, int input, grid table) {
-    buffery = i;
-    aligned = 1;
-    while (table.data[buffery][input] == jeton && bufferx != 0 || bufferx != table.side){
+    int buffery = i;
+    int aligned = 0;
+    while (table.data[buffery][input] == jeton && buffery != 0 && buffery != table.side){
         buffery = buffery - 1;
         aligned = aligned + 1;
     }
-    if (aligned > n) {
+    if (aligned >= n) {
         printf("le joueur %c à Gagné\n", jeton);
         scanf("%d", &consent);
         if (consent == 1) {
@@ -135,13 +135,13 @@ int checkcolonne(char jeton, int n, int i, int input, grid table) {
             return -1;
         }
     }
-    aligned = 1;
+    aligned = 0;
     buffery = i;
-    while (table.data[buffery][input] == jeton || bufferx != 0 || bufferx != table.side) {
+    while (table.data[buffery][input] == jeton && buffery != 0 && buffery != table.side) {
         buffery = buffery + 1;
         aligned = aligned + 1;
     }
-    if (aligned > n) {
+    if (aligned >= n) {
         printf("le joueur %c à Gagné\n", jeton);
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);

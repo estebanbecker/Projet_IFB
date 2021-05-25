@@ -17,12 +17,13 @@ int main() {
 
     new_grid(12,ptable);
 
-    addtoken('X',3,ptable);
+
+    addtoken('X',4,ptable);
     show_grid(table);
     addtoken('O',5,ptable);
     show_grid(table);
-    addtoken('X',4,ptable);
+    addtoken('X',5,ptable);
     show_grid(table);
-
+    printf("%d",checkdiag('X', 2, 10, 5, table));
 
 }

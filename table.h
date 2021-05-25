@@ -6,8 +6,8 @@
 #define PROJET_IFB_TABLE_H
 
 typedef struct{
-    int side; //Taille du coté
-    char **data; //Utilisation du double pointeur pour faire une allocation dynamique en 2 dimansion
+    int side;
+    char **data;
 }grid;
 
 /**

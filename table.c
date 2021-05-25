@@ -2,7 +2,6 @@
 // Created by esteb on 18/05/2021.
 //
 
-#include <malloc.h>
 #include "table.h"
 #include <stdlib.h>
 #include <stdio.h>

@@ -15,7 +15,7 @@ int main() {
 
 
 
-    new_grid(7,ptable);
+    new_grid(12,ptable);
 
     addtoken('X',3,ptable);
     show_grid(table);

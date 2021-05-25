@@ -7,19 +7,20 @@
 
 
 
-int addtoken(int jeton, int input, grid *pgrid) {
-    int i=0;
+int addtoken(char jeton, int input, grid *pgrid) {
+    int i=(*pgrid).side-1;
     while ((*pgrid).data[i][input] != '-') {
-        i = i + 1;
+        --i;
     }
     (*pgrid).data[i][input]=jeton;
 }
 
-int removetoken(int jeton, int input, grid *pgrid){
+int removetoken(int input, grid *pgrid){
     int i=0;
     while ((*pgrid).data[i][input] != 'X' && (*pgrid).data[i][input] != 'O'){
-        i=i+1;
+        ++i;
+
     }
-    int buffer_y = i;
-    int buffer_x = input;
+    (*pgrid).data[i][input] = '-';
+    return input;
 }

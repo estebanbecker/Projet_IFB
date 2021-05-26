@@ -20,14 +20,16 @@ int main() {
 
 
 
-    //show_grid(table);
+    new_grid(12,ptable);
 
 
-    load(&turn,pbuffer,&type_part,ptable,"a");
-    printf("Buffer: %d\n",buffer);
-    printf("Type part: %d\n",type_part);
-    printf("Turn: %c\n",turn);
-
+    addtoken('X',4,ptable);
     show_grid(table);
+    addtoken('O',5,ptable);
+    show_grid(table);
+    addtoken('X',4,ptable);
+    show_grid(table);
+    printf("%d",checkcolonne('X', 2, 10, 4, table));
+
 
 }

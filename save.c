@@ -2,7 +2,7 @@
 // Created by esteb on 25/05/2021.
 //
 #include <stdio.h>
-#include "save.h"
+#include "table.h"
 
 
 void save(char turn, int colonne_no,int type_partie, grid grille,char slot[30]){

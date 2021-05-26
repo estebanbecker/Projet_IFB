@@ -2,12 +2,16 @@
 #include "addtoken.h"
 #include "checkwinner.h"
 #include "save.h"
+#include <stdio.h>
 
 int main() {
 
     grid table;
     grid *ptable;
-    int buffer,*pbuffer;
+    int buffer;
+    int *pbuffer;
+    int type_part;
+    char turn;
 
     pbuffer=&buffer;
 
@@ -15,15 +19,15 @@ int main() {
 
 
 
-    new_grid(2,ptable);
 
-    addtoken('X',1,ptable);
-    show_grid(table);
-    addtoken('O',1,ptable);
-    show_grid(table);
-    addtoken('X',0,ptable);
-    show_grid(table);
+    //show_grid(table);
 
-    save('_',5,1,table,'a');
+
+    load(&turn,pbuffer,&type_part,ptable,"a");
+    printf("Buffer: %d\n",buffer);
+    printf("Type part: %d\n",type_part);
+    printf("Turn: %c\n",turn);
+
+    show_grid(table);
 
 }

@@ -25,4 +25,10 @@ void new_grid(int side,grid *table);
 
 void show_grid(grid table);
 
+/**
+ * Supprimer la grille
+ * @param table table a supprimer
+ */
+void del_grid(grid * table);
+
 #endif //PROJET_IFB_TABLE_H

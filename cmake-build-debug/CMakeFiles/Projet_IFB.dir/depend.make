@@ -7,11 +7,16 @@ CMakeFiles/Projet_IFB.dir/addtoken.c.obj: ../table.h
 
 CMakeFiles/Projet_IFB.dir/checkwinner.c.obj: ../checkwinner.c
 CMakeFiles/Projet_IFB.dir/checkwinner.c.obj: ../checkwinner.h
+CMakeFiles/Projet_IFB.dir/checkwinner.c.obj: ../table.h
 
 CMakeFiles/Projet_IFB.dir/main.c.obj: ../addtoken.h
 CMakeFiles/Projet_IFB.dir/main.c.obj: ../checkwinner.h
 CMakeFiles/Projet_IFB.dir/main.c.obj: ../main.c
+CMakeFiles/Projet_IFB.dir/main.c.obj: ../save.h
 CMakeFiles/Projet_IFB.dir/main.c.obj: ../table.h
+
+CMakeFiles/Projet_IFB.dir/save.c.obj: ../save.c
+CMakeFiles/Projet_IFB.dir/save.c.obj: ../table.h
 
 CMakeFiles/Projet_IFB.dir/table.c.obj: ../table.c
 CMakeFiles/Projet_IFB.dir/table.c.obj: ../table.h

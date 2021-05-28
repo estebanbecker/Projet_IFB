@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Projet_IFB.dir/addtoken.c.obj"
   "CMakeFiles/Projet_IFB.dir/checkwinner.c.obj"
   "CMakeFiles/Projet_IFB.dir/main.c.obj"
+  "CMakeFiles/Projet_IFB.dir/save.c.obj"
   "CMakeFiles/Projet_IFB.dir/table.c.obj"
   "Projet_IFB.exe"
   "Projet_IFB.exe.manifest"

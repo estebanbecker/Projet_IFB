@@ -6,28 +6,24 @@
 
 int main() {
 
-    grid table;
-    grid *ptable;
-    int buffer;
-    int *pbuffer;
+    grid table; //La grille de la partie
+    int buffer=-1;
     int type_part;
-    char turn;
-
-    pbuffer=&buffer;
-
-    ptable=&table;
+    char turn='X';
 
 
 
 
-    new_grid(12,ptable);
 
 
-    addtoken('X',4,ptable);
+    new_grid(12,&table);
+
+
+    addtoken('X',4,&table);
     show_grid(table);
-    addtoken('O',5,ptable);
+    addtoken('O',5,&table);
     show_grid(table);
-    addtoken('X',4,ptable);
+    addtoken('X',4,&table);
     show_grid(table);
     printf("%d",checkcolonne('X', 2, 10, 4, table));
 

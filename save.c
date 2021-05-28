@@ -22,6 +22,8 @@ void save(char turn, int colonne_no,int type_partie, grid grille,char slot[30]){
         }
 
     }
+
+    printf()
 }
 
 void load(char *turn,int * colonne_no, int * type_partie, grid * grille, char slot[30]){

@@ -12,12 +12,13 @@ int main() {
     char turn='X';
 
 
+    load(&turn,&buffer,&type_part,&table,"abd");
 
-
-
+    show_grid(table);
 
     new_grid(12,&table);
 
+    printf("%d",valid_remove_colonne(3,table));
 
     addtoken('X',4,&table);
     show_grid(table);

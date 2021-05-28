@@ -7,7 +7,7 @@
 
 void save(char turn, int colonne_no,int type_partie, grid grille,char slot[30]){
 
-    FILE* file= fopen(&slot,"w");//Crée un fichier
+    FILE* file= fopen(slot,"w");//Crée un fichier
 
     fprintf(file,"%d\n",grille.side);//Erengistre le nombre de case de la grille
     fprintf(file,"%c\n",turn);//Enrengistre le tour du joueur
@@ -23,33 +23,39 @@ void save(char turn, int colonne_no,int type_partie, grid grille,char slot[30]){
 
     }
 
-    printf()
 }
 
-void load(char *turn,int * colonne_no, int * type_partie, grid * grille, char slot[30]){
+int load(char *turn,int * colonne_no, int * type_partie, grid * grille, char slot[30]){
 
     FILE* file= fopen(slot, "r");//Ouverture du fichier
-    char buffer_string[11];int buffer_int;//Memoire d'un string et d'un integrer
 
-    fgets(buffer_string,5,file); //Recuperation de la taille de la grille
-    sscanf((const char *) &buffer_string, "%d", &buffer_int);
-    new_grid(buffer_int,grille);//Creation de la grille
+    if (file==NULL){
+        printf("Fichier inexistant\n"); //Vérifie que le fichier à bien été ouvert
+    }else{
 
-    fgets(turn,10,file);//Recuperation du tour de la personne qui doit jouer
+        char buffer_string[11];int buffer_int;//Memoire d'un string et d'un integrer
 
-    fgets(buffer_string,5,file);//Recuperation du type de partie (JvJ ou IA)
-    sscanf((const char *) &buffer_string, "%d", type_partie);
+        fgets(buffer_string,5,file); //Recuperation de la taille de la grille
+        sscanf((const char *) &buffer_string, "%d", &buffer_int);
+        new_grid(buffer_int,grille);//Creation de la grille
 
-    fgets(buffer_string,5,file);//Recuperation de la colonne interdite
-    sscanf((const char *) &buffer_string, "%d", colonne_no);
+        fgets(turn,10,file);//Recuperation du tour de la personne qui doit jouer
 
-    for (int i = 0; i < (*grille).side; ++i) {
+        fgets(buffer_string,5,file);//Recuperation du type de partie (JvJ ou IA)
+        sscanf((const char *) &buffer_string, "%d", type_partie);
 
-        for (int j = 0; j < (*grille).side; ++j) {
+        fgets(buffer_string,5,file);//Recuperation de la colonne interdite
+        sscanf((const char *) &buffer_string, "%d", colonne_no);
 
-            fgets(&(*grille).data[i][j],10,file);//Récuperation des valeurs du tableau
+        for (int i = 0; i < (*grille).side; ++i) {
+
+            for (int j = 0; j < (*grille).side; ++j) {
+
+                fgets(&(*grille).data[i][j],10,file);//Récuperation des valeurs du tableau
+
+            }
 
         }
-
     }
+
 }

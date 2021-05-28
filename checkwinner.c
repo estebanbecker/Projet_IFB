@@ -11,9 +11,10 @@ int tableau[10][10], aligned = 1, consent = 0, buffery, bufferx;
 //penser à stocker input dans un buffer pour pouvoir le faire évolluer dans les differents while's
 
 int checkwinner(char jeton, int n, int i, int input, grid table){
-    checkligne(jeton, n, i, input, table);
+
     checkdiag(jeton, n, i, input, table);
     checkcolonne(jeton, n, i, input, table);
+    checkligne(jeton, n, i, input, table);
 }
 
 int checkligne(char jeton, int n, int i, int input, grid table) {

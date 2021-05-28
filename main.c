@@ -38,7 +38,7 @@ int main() {
         }
     }
 
-    while(checkdiag!=1 && checkcolonne != 1 && checkligne !=1){
+    do{
         turn=changetoken(turn);
         show_grid(table);
         printf("(1) Jouer jeton? - ");
@@ -49,10 +49,12 @@ int main() {
             while(checkup!=1) {
                 printf("Où ajouter jeton?? 1 - %d", size+2);
                 scanf("%d", &input);
-                if (input - 1 != buffer) {
+                if (input - 1 == buffer) {
+                    printf("Vous ne pouvez pas jouer dans cette colonne.\n");
+                }else{
                     checkup=1;
                 }
-                printf("Vous ne pouvez pas jouer dans cette colonne.\n");
+
             }
             buffer=-1;
             i=addtoken(turn, input-1, &table);
@@ -62,7 +64,8 @@ int main() {
             if(action==2){
                 printf("Jeton à supprimer 1 - %d", size+2);
                 scanf("%d", &input);
-                removetoken(input-1, &table, &buffer);
+                buffer=input;
+                removetoken(input-1, &table);
             }else{
                 if(action==3){
                     printf("Nom de sauvegarde???\n");
@@ -76,5 +79,5 @@ int main() {
                 }
             }
         }
-    }
+    } while (checkwinner(turn, size, i, input-1, table));
 }

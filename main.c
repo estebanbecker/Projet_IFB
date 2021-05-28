@@ -33,6 +33,7 @@ int main() {
     else{
         if(action==2){
             printf("Nom de sauvegarde??");
+            fflush(stdin);
             gets(name);
             load(&turn,&buffer,&type_part,&table,name);
         }
@@ -70,6 +71,7 @@ int main() {
             }else{
                 if(action==3){
                     printf("Nom de sauvegarde???\n");
+                    fflush(stdin);
                     gets(name);
                     save(turn, buffer, 1, table, name);
                     printf("Quitter?  - 0/1\n");

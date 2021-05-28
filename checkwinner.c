@@ -19,7 +19,7 @@ int checkwinner(char jeton, int n, int i, int input, grid table){
 int checkligne(char jeton, int n, int i, int input, grid table) {
     int bufferx = input;
     int aligned = 0;
-    while (table.data[table.side-1][bufferx] == jeton && bufferx != 0 && bufferx != table.side){
+    while (bufferx != 0 && bufferx != table.side && table.data[table.side-1][bufferx] == jeton){
         bufferx = bufferx - 1;
         aligned = aligned + 1;
     }
@@ -34,7 +34,7 @@ int checkligne(char jeton, int n, int i, int input, grid table) {
     }
     aligned = 0;
     bufferx = input;
-    while (table.data[table.side-1][bufferx] == jeton && bufferx != 0 && bufferx != table.side) {
+    while (bufferx != 0 && bufferx != table.side && table.data[table.side-1][bufferx] == jeton) {
         bufferx = bufferx + 1;
         aligned = aligned + 1;
     }
@@ -54,7 +54,7 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
     int aligned = 0;
     int buffery = i;
     int bufferx = input;
-    while (table.data[buffery][bufferx] == jeton && bufferx != 0 && bufferx != table.side && buffery!=0 && buffery!=table.side) {
+    while (bufferx != table.side && buffery!=0 && buffery!=table.side && bufferx != 0 && table.data[buffery][bufferx] == jeton) {
         bufferx = bufferx + 1;
         buffery = buffery + 1;
         aligned = aligned + 1;
@@ -72,7 +72,7 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
     bufferx = input;
     buffery = i;
     aligned = 0;
-    while (table.data[buffery][bufferx] == jeton && bufferx != 0 && bufferx != table.side && buffery!=0 && buffery!=table.side) {
+    while (bufferx != 0 && bufferx != table.side && buffery!=0 && buffery!=table.side && table.data[buffery][bufferx] == jeton) {
         bufferx = bufferx - 1;
         buffery = buffery - 1;
         aligned = aligned + 1;
@@ -90,7 +90,7 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
     aligned = 0;
     bufferx = input;
     buffery = i;
-    while (table.data[buffery][bufferx] == jeton && bufferx != 0 && bufferx != table.side && buffery!=0 && buffery!=table.side) {
+    while (bufferx != 0 && bufferx != table.side && buffery!=0 && buffery!=table.side && table.data[buffery][bufferx] == jeton) {
         bufferx = bufferx + 1;
         buffery = buffery - 1;
         aligned = aligned + 1;
@@ -108,7 +108,7 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
     bufferx = input;
     buffery = i;
     aligned=0;
-    while (table.data[buffery][bufferx] == jeton && bufferx != 0 && bufferx != table.side && buffery!=0 && buffery!=table.side) {
+    while (bufferx != 0 && bufferx != table.side && buffery!=0 && buffery!=table.side && table.data[buffery][bufferx] == jeton) {
         bufferx = bufferx - 1;
         buffery = buffery + 1;
         aligned = aligned + 1;
@@ -128,7 +128,7 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
 int checkcolonne(char jeton, int n, int i, int input, grid table) {
     int buffery = i;
     int aligned = 0;
-    while (table.data[buffery][input] == jeton && buffery != 0 && buffery != table.side){
+    while (buffery != 0 && buffery != table.side && table.data[buffery][input] == jeton){
         buffery = buffery - 1;
         aligned = aligned + 1;
     }
@@ -143,7 +143,7 @@ int checkcolonne(char jeton, int n, int i, int input, grid table) {
     }
     aligned = 0;
     buffery = i;
-    while (table.data[buffery][input] == jeton && buffery != 0 && buffery != table.side) {
+    while (buffery != 0 && buffery != table.side && table.data[buffery][input] == jeton) {
         buffery = buffery + 1;
         aligned = aligned + 1;
     }

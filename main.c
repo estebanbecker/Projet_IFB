@@ -46,13 +46,15 @@ int main() {
         printf("(3) Sauvegarder");
         scanf("%d", &action);
         if(action==1){
+            checkup=0;
             while(checkup!=1) {
                 printf("Où ajouter jeton?? 1 - %d", size+2);
                 scanf("%d", &input);
                 if (input - 1 != buffer) {
                     checkup=1;
-                }
+                }else if(buffer==input-1){
                 printf("Vous ne pouvez pas jouer dans cette colonne.\n");
+                }
             }
             buffer=-1;
             i=addtoken(turn, input-1, &table);
@@ -63,6 +65,7 @@ int main() {
                 printf("Jeton à supprimer 1 - %d", size+2);
                 scanf("%d", &input);
                 removetoken(input-1, &table, &buffer);
+                show_grid(table);
             }else{
                 if(action==3){
                     printf("Nom de sauvegarde???\n");

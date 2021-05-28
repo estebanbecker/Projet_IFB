@@ -6,6 +6,9 @@
 #define PROJET_IFB_ADDTOKEN_H
 #include "table.h"
 
+
+char changetoken(char jeton);
+
 /**
  * Ajoute un jeton dans une colonne
  * @param jeton Le jteon à ajouter (X ou O)
@@ -13,7 +16,6 @@
  * @param pgrid Le pointeur de la grille à modifier
  * @return Renvoit la ligne ou le jeton a été ajouté
  */
-char changetoken(char jeton);
 int addtoken(char jeton, int input, grid *pgrid);
 
 /**

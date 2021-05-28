@@ -21,9 +21,9 @@ int main() {
     pbuffer=&buffer;
     ptable=&table;
     int size;
-    printf("----- PUISSANCE N ----");
+    printf("----- PUISSANCE N ----\n");
     printf("(1) Nouvelle partie? - ");
-    printf("(2) Charger partie");
+    printf("(2) Charger partie\n");
     scanf("%d", &action);
     if(action==1){
     printf("Quelle taille puissance N\n");
@@ -43,11 +43,11 @@ int main() {
         show_grid(table);
         printf("(1) Jouer jeton? - ");
         printf("(2) Effacer jeton? - ");
-        printf("(3) Sauvegarder");
+        printf("(3) Sauvegarder\n");
         scanf("%d", &action);
         if(action==1){
             while(checkup!=1) {
-                printf("Où ajouter jeton?? 1 - %d", size+2);
+                printf("Ou ajouter jeton?? 1 - %d\n", size+2);
                 scanf("%d", &input);
                 if (input - 1 == buffer) {
                     printf("Vous ne pouvez pas jouer dans cette colonne.\n");

@@ -168,6 +168,33 @@ addtoken.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/addtoken.c.s
 .PHONY : addtoken.c.s
 
+bot.obj: bot.c.obj
+
+.PHONY : bot.obj
+
+# target to build an object file
+bot.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/bot.c.obj
+.PHONY : bot.c.obj
+
+bot.i: bot.c.i
+
+.PHONY : bot.i
+
+# target to preprocess a source file
+bot.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/bot.c.i
+.PHONY : bot.c.i
+
+bot.s: bot.c.s
+
+.PHONY : bot.s
+
+# target to generate assembly for a file
+bot.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet_IFB.dir\build.make CMakeFiles/Projet_IFB.dir/bot.c.s
+.PHONY : bot.c.s
+
 checkwinner.obj: checkwinner.c.obj
 
 .PHONY : checkwinner.obj
@@ -288,6 +315,9 @@ help:
 	@echo ... addtoken.obj
 	@echo ... addtoken.i
 	@echo ... addtoken.s
+	@echo ... bot.obj
+	@echo ... bot.i
+	@echo ... bot.s
 	@echo ... checkwinner.obj
 	@echo ... checkwinner.i
 	@echo ... checkwinner.s

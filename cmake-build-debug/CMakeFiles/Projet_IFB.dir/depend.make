@@ -5,6 +5,9 @@ CMakeFiles/Projet_IFB.dir/addtoken.c.obj: ../addtoken.c
 CMakeFiles/Projet_IFB.dir/addtoken.c.obj: ../addtoken.h
 CMakeFiles/Projet_IFB.dir/addtoken.c.obj: ../table.h
 
+CMakeFiles/Projet_IFB.dir/bot.c.obj: ../bot.c
+CMakeFiles/Projet_IFB.dir/bot.c.obj: ../bot.h
+
 CMakeFiles/Projet_IFB.dir/checkwinner.c.obj: ../checkwinner.c
 CMakeFiles/Projet_IFB.dir/checkwinner.c.obj: ../checkwinner.h
 CMakeFiles/Projet_IFB.dir/checkwinner.c.obj: ../table.h

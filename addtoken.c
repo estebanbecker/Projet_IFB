@@ -9,6 +9,8 @@
 
 int addtoken(char jeton, int input, grid *pgrid) {
     int i=(*pgrid).side-1;
+
+    //Parcours la colonne de bas en haut jusqu'à trouver une case vide
     while ((*pgrid).data[i][input] != '-') {
         --i;
     }
@@ -17,15 +19,15 @@ int addtoken(char jeton, int input, grid *pgrid) {
     return i;
 }
 
-int removetoken(int input, grid *pgrid,int *buffer){
+int removetoken(int input, grid *pgrid){
     int i=0;
-    while ((*pgrid).data[i][input] != 'X' && (*pgrid).data[i][input] != 'O'){
+
+    //parcours la grille de haut en bas jusqu'à ce que la case soit vide
+    while ((*pgrid).data[i][input] == '-'){
         ++i;
 
     }
     (*pgrid).data[i][input] = '-';
-
-    *buffer=input;
     return i;
 
 }

@@ -6,9 +6,22 @@
 #define PROJET_IFB_ADDTOKEN_H
 #include "table.h"
 
+/**
+ * Ajoute un jeton dans une colonne
+ * @param jeton Le jteon à ajouter (X ou O)
+ * @param input La colonne ou ajouter le jeton
+ * @param pgrid Le pointeur de la grille à modifier
+ * @return Renvoit la ligne ou le jeton a été ajouté
+ */
 int addtoken(char jeton, int input, grid *pgrid);
 
-int removetoken(int input, grid *pgrid,int *buffer);
+/**
+ * Retire un jeton d'une colonne
+ * @param input La colonne où il faut retirer le jeton
+ * @param pgrid Le pointeur de la grille à modifier
+ * @return Numero de la ligne qui a été modifié
+ */
+int removetoken(int input, grid *pgrid);
 
 /**
  * Vérifie que la colonne n'est pas pleine

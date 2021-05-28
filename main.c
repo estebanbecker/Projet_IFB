@@ -64,7 +64,8 @@ int main() {
             if(action==2){
                 printf("Jeton à supprimer 1 - %d", size+2);
                 scanf("%d", &input);
-                removetoken(input-1, &table, &buffer);
+                buffer=input-1;
+                removetoken(input-1, &table);
                 show_grid(table);
             }else{
                 if(action==3){

@@ -13,6 +13,7 @@
  * @param pgrid Le pointeur de la grille à modifier
  * @return Renvoit la ligne ou le jeton a été ajouté
  */
+char changetoken(char jeton);
 int addtoken(char jeton, int input, grid *pgrid);
 
 /**

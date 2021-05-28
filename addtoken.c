@@ -5,7 +5,16 @@
 #include "addtoken.h"
 
 
-
+char changetoken(char jeton){
+    if(jeton=='X'){
+        jeton='O';
+    }else{
+        if(jeton=='O'){
+            jeton='X';
+        }
+    }
+    return jeton;
+}
 
 int addtoken(char jeton, int input, grid *pgrid) {
     int i=(*pgrid).side-1;

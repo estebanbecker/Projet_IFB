@@ -38,3 +38,22 @@ int removetoken(int input, grid *pgrid,int *buffer){
     return i;
 
 }
+
+int valid_add_colonne(int colonne, grid table){
+
+    if (table.data[colonne][0]=='-'){ //Verifie que la case en haut est libre
+        return 1;
+    }else{
+        return 0;
+    }
+
+}
+
+int valid_remove_colonne(int colonne, grid table){
+
+    if(table.data[colonne][table.side-1]=='-'){ //Verifie que la case en bat est pleine
+        return 0;
+    }else {
+        return 1;
+    }
+}

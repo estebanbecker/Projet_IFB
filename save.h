@@ -24,7 +24,8 @@ void save(char turn, int colonne_no,int type_partie, grid grille, char slot[30])
  * @param type_partie Pointeur pour stocker le type de partie JvJ/IA
  * @param grille Pointeur pour stocker la grille
  * @param slot Nom du ficher à charger
+ * @return 1 si fichier crée 0 si fichier inexistant
  */
-void load(char *turn,int * colonne_no, int * type_partie, grid * grille, char slot[30]);
+int load(char *turn,int * colonne_no, int * type_partie, grid * grille, char slot[30]);
 
 #endif //PROJET_IFB_SAVE_H

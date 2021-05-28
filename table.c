@@ -29,6 +29,8 @@ void new_grid(int n,grid *table){
 
                 printf("\n Echec lors de l'allocation memoire!!!");
             }
+
+            free((*table).data);
         }
     }
 
@@ -80,5 +82,20 @@ void show_grid(grid table){
         printf("\n");
 
     }
+
+}
+
+void del_grid(grid * table){
+
+
+
+        for (int i = 0; i < (*table).side; ++i) {
+
+            free((*table).data[i]);
+
+        }
+
+        free((*table).data);
+
 
 }

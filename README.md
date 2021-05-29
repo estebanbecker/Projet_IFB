@@ -1,5 +1,4 @@
 # Projet_IFB
 
-On a tout ici, le puissance N, le load, le save, (((((le bot pas encoore))))).
+On a tout ici, le puissance N, le remove, le load, le save, (((((le bot pas encoore))))). lessgoo
 
-Il manque que de pouvoir retirer le jeton et ça part.

@@ -47,7 +47,6 @@ void new_grid(int n,grid *table){
 void show_grid(grid table){
 
     int nb_char=1,mem=table.side+1,mem2;
-
     while (mem>=10){
         mem=mem/10;
         ++nb_char;

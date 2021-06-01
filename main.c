@@ -75,16 +75,16 @@ int main() {
                 printf("Ou ajouter jeton? 1 - %d\n", size+2);
                 scanf("%d", &colonne_input);//Aquisition de l'emplacement du jeton avec message d'erreur
                 fflush(stdin);
-                while (0>=colonne_input || colonne_input > table.side){
+                while (0>colonne_input-1 || colonne_input > table.side){
                     printf("La colonne n'existe pas \n");
                     printf("Ou ajouter jeton? 1 - %d\n", size+2);
                     scanf("%d", &colonne_input);
                     fflush(stdin);
                 }
 
-                if (colonne_input - 1 != colonne_ban) {
+                if (colonne_input - 1 != colonne_ban  && valid_add_colonne(colonne_input-1,table)) {
                     checkup=1;
-                }else if(colonne_ban==colonne_input-1){
+                }else{
                     printf("Vous ne pouvez pas jouer dans cette colonne.\n");
                 }
             }

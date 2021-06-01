@@ -7,9 +7,9 @@
 int main() {
 
     grid table;
+    char turn='X';//Stock le jeton du joueur en cours
     int colonne_ban=-1;//Colonne interdite suite au retrait d'un jeton (-1 si aucune)
     int type_part;
-    char turn='X';//Stock le jeton du joueur en cours
     int action;
     int colonne_input;//Colonne entrée
     int quit;
@@ -32,16 +32,16 @@ int main() {
     }
 
     if(action==1){
-    printf("Quelle taille puissance N\n");
-    scanf("%d", &size);
-    fflush(stdin);
-        while (action<=0){
-            printf("Veuillez entrer une valeur superieur a 0: ");
-            scanf("%d", &action);
+        printf("Quelle taille puissance N\n");
+        scanf("%d", &size);
+        fflush(stdin);
+        while (size<=3){
+            printf("Veuillez entrer une valeur superieur a 3: ");
+            scanf("%d", &size);
             fflush(stdin);
         }
 
-    new_grid(size+2,&table);
+        new_grid(size+2,&table);
     }
     else{
         if(action==2){
@@ -73,7 +73,6 @@ int main() {
             checkup=0;
             while(checkup!=1) {
                 printf("Ou ajouter jeton? 1 - %d\n", size+2);
-
                 scanf("%d", &colonne_input);//Aquisition de l'emplacement du jeton avec message d'erreur
                 fflush(stdin);
                 while (0>=colonne_input || colonne_input > table.side){
@@ -86,31 +85,29 @@ int main() {
                 if (colonne_input - 1 != colonne_ban) {
                     checkup=1;
                 }else if(colonne_ban==colonne_input-1){
-                printf("Vous ne pouvez pas jouer dans cette colonne.\n");
+                    printf("Vous ne pouvez pas jouer dans cette colonne.\n");
                 }
             }
             colonne_ban=-1;
             ligne=addtoken(turn, colonne_input-1, &table);
             show_grid(table);
             checkwinner(turn, size, ligne, colonne_input-1, table);
+        }else  if(action==2){
+            printf("Jeton à supprimer 1 - %d", size+2);
+            scanf("%d", &colonne_input);
+            colonne_ban=colonne_input-1;
+            removetoken(colonne_input-1, &table);
+            show_grid(table);
         }else{
-            if(action==2){
-                printf("Jeton à supprimer 1 - %d", size+2);
-                scanf("%d", &colonne_input);
-                colonne_ban=colonne_input-1;
-                removetoken(colonne_input-1, &table);
-                show_grid(table);
-            }else{
-                if(action==3){
-                    printf("Nom de sauvegarde?\n");
-                    fflush(stdin);
-                    gets(name);
-                    save(turn, colonne_ban, 1, table, name);
-                    printf("Quitter?  - 0/1\n");
-                    scanf("%d", &quit);
-                    if(quit==1){
-                        return 0;
-                    }
+            if(action==3){
+                printf("Nom de sauvegarde?\n");
+                fflush(stdin);
+                gets(name);
+                save(turn, colonne_ban, 1, table, name);
+                printf("Quitter?  - 0/1\n");
+                scanf("%d", &quit);
+                if(quit==1){
+                    return 0;
                 }
             }
         }

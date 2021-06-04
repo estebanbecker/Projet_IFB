@@ -84,12 +84,13 @@ int main() {
 
                 if (colonne_input - 1 != colonne_ban  && valid_add_colonne(colonne_input-1,table)) {
                     checkup=1;
+                    ligne=addtoken(turn, colonne_input-1, &table);
                 }else{
                     printf("Vous ne pouvez pas jouer dans cette colonne.\n");
                 }
             }
             colonne_ban=-1;
-            ligne=addtoken(turn, colonne_input-1, &table);
+
             show_grid(table);
             checkwinner(turn, size, ligne, colonne_input-1, table);
         }else  if(action==2){

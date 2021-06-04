@@ -17,7 +17,7 @@ void save(char turn, int colonne_no,int type_partie, grid grille,char slot[30]){
 
         for (int j = 0; j < grille.side; ++j) {
 
-            fprintf(file,"%c\n",grille.data[i][j]); //Enrengistre les valeurs de la grille
+            fprintf(file,"%c",grille.data[i][j]); //Enrengistre les valeurs de la grille
 
         }
 
@@ -39,6 +39,7 @@ int load(char *turn,int * colonne_no, int * type_partie, grid * pgrille, char sl
         sscanf((const char *) &buffer_string, "%d", &buffer_int);
         new_grid(buffer_int,pgrille);//Creation de la grille
         *turn=fgetc(file);//Recuperation du tour de la personne qui doit jouer
+        fgetc(file);
         fgets(buffer_string,5,file);//Recuperation du type de partie (JvJ ou IA)
         sscanf((const char *) &buffer_string, "%d", type_partie);
 
@@ -49,7 +50,7 @@ int load(char *turn,int * colonne_no, int * type_partie, grid * pgrille, char sl
 
             for (int j = 0; j < (*pgrille).side; ++j) {
 
-                fgets(&(*pgrille).data[i][j],10,file);//Récuperation des valeurs du tableau
+                (*pgrille).data[i][j]=fgetc(file);//Récuperation des valeurs du tableau
 
             }
 

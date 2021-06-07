@@ -30,7 +30,8 @@ int load(char *turn,int * colonne_no, int * type_partie, grid * pgrille, char sl
     FILE* file= fopen(slot, "r");//Ouverture du fichier
 
     if (file==NULL){
-        printf("Fichier inexistant\n"); //Vérifie que le fichier à bien été ouvert
+        printf("Fichier inexistant\n");
+        return 0;//Vérifie que le fichier à bien été ouvert
     }else{
 
         char buffer_string[11];int buffer_int;//Memoire d'un string et d'un integrer
@@ -57,4 +58,5 @@ int load(char *turn,int * colonne_no, int * type_partie, grid * pgrille, char sl
         }
     }
     show_grid(*pgrille);
+    return 1;
 }

@@ -53,7 +53,7 @@ int main() {
                 printf("Nom de sauvegarde:\n");
                 fflush(stdin);
                 gets(name);
-            }while(!load(&turn,&colonne_ban,&type_part,&table,name));
+            }while(!load(&turn,&colonne_ban,&botmode,&table,name));
             size=table.side-2;
         }
     }
@@ -115,7 +115,7 @@ int main() {
                 printf("Nom de sauvegarde?\n");
                 fflush(stdin);
                 gets(name);
-                save(turn, colonne_ban, 1, table, name);
+                save(turn, colonne_ban, botmode, table, name);
                 printf("Quitter?  - 0/1\n");
                 scanf("%d", &quit);
                 if(quit==1){

@@ -2,6 +2,7 @@
 #include "addtoken.h"
 #include "checkwinner.h"
 #include "save.h"
+#include "bot.h"
 #include <stdio.h>
 
 int main() {
@@ -17,6 +18,7 @@ int main() {
     int checkup;
     char name[30];//Nom du fichier de sauvegarde
     int size;//Taille de la grille
+    int botmode=0;
 
 
     printf("----- PUISSANCE N ----\n");
@@ -34,6 +36,8 @@ int main() {
     if(action==1){
         printf("Quelle taille puissance N\n");
         scanf("%d", &size);
+        printf("Voulez-vous jouer en mode ordinnateur (0) ou JvJ (1)\n");
+        scanf("%d", &botmode);
         fflush(stdin);
         while (size<=3){
             printf("Veuillez entrer une valeur superieur a 3: ");
@@ -55,7 +59,14 @@ int main() {
     }
 
     while(checkdiag!=1 && checkcolonne != 1 && checkligne !=1){
-        turn=changetoken(turn);
+        if(botmode==0){
+            turn='O';
+            bot(&table, colonne_ban);
+        }else{
+            if(botmode==1){
+                turn=changetoken(turn);
+            }
+        }
         show_grid(table);
         printf("(1) Jouer jeton? - ");
         printf("(2) Effacer jeton? - ");

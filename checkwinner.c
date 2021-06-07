@@ -8,7 +8,9 @@
 
 int tableau[10][10], aligned = 1, consent = 0, buffery, bufferx;
 
-//penser à stocker input dans un buffer pour pouvoir le faire évolluer dans les differents while's
+/**
+ * Décomposition de la fonction check winner dans les différentes directions
+ */
 
 int checkwinner(char jeton, int n, int i, int input, grid table){
 
@@ -17,10 +19,20 @@ int checkwinner(char jeton, int n, int i, int input, grid table){
     checkligne(jeton, n, i, input, table);
 }
 
+/**
+ * Vérification de la victoire sur l'axe X
+ * @param jeton
+ * @param n
+ * @param i
+ * @param input
+ * @param table
+ * @return
+ */
+
 int checkligne(char jeton, int n, int i, int input, grid table) {
     int bufferx = input;
     int aligned = 0;
-    while (bufferx != 0 && bufferx != table.side && table.data[table.side-1][bufferx] == jeton){
+    while (bufferx != 0 && bufferx != table.side && table.data[table.side-1][bufferx] == jeton){ //Vefification sur l'axe X-
         bufferx = bufferx - 1;
         aligned = aligned + 1;
     }
@@ -35,7 +47,7 @@ int checkligne(char jeton, int n, int i, int input, grid table) {
     }
     aligned = 0;
     bufferx = input;
-    while (bufferx != 0 && bufferx != table.side && table.data[table.side-1][bufferx] == jeton) {
+    while (bufferx != 0 && bufferx != table.side && table.data[table.side-1][bufferx] == jeton) { //Vérification sur X+
         bufferx = bufferx + 1;
         aligned = aligned + 1;
     }

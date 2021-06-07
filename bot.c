@@ -7,6 +7,7 @@
 #include "addtoken.h"
 
 #include <stdlib.h>
+#include <printf.h>
 
 void bot(grid *table,int ban_col){
 
@@ -21,6 +22,7 @@ void bot(grid *table,int ban_col){
 
             if(valid_add_colonne(buffer1,*table) && buffer1!=ban_col){//vérifie si l'action peut être effectué
                 addtoken('X',buffer1,table);
+                printf("Bot a joué dans la colonne %d\n", buffer1+1);
             }else{
                 has_play=1; //empêche le programme de sortir de la boucle
             }
@@ -29,6 +31,7 @@ void bot(grid *table,int ban_col){
 
             if(valid_remove_colonne(buffer1,*table)){//vérifie si l'action peut être effectué
                 removetoken(buffer1,table);
+                printf("Bot a supprimé un jeton dans la colonne %d\n", buffer1+1);
             }else{
                 has_play=1;//empêche le programme de sortir de la boucle
             }

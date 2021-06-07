@@ -61,6 +61,7 @@ int main() {
     while(checkdiag!=1 && checkcolonne != 1 && checkligne !=1){
         if(botmode==0){
             turn='O';
+            printf("Bot réfléchit...\n");
             bot(&table, colonne_ban);
         }else{
             if(botmode==1){

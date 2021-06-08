@@ -22,7 +22,7 @@ void save(char turn, int colonne_no,int type_partie, grid grille,char slot[30]){
         }
 
     }
-
+    fclose(file);
 }
 
 int load(char *turn,int * colonne_no, int * type_partie, grid * pgrille, char slot[30]){
@@ -57,6 +57,6 @@ int load(char *turn,int * colonne_no, int * type_partie, grid * pgrille, char sl
 
         }
     }
-    show_grid(*pgrille);
+    fclose(file);
     return 1;
 }

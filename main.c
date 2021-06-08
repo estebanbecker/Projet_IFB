@@ -106,11 +106,20 @@ int main() {
             show_grid(table);
             checkwinner(turn, size, ligne, colonne_input-1, table);
         }else  if(action==2){
-            printf("Jeton à supprimer 1 - %d", size+2);
-            scanf("%d", &colonne_input);
-            colonne_ban=colonne_input-1;
-            removetoken(colonne_input-1, &table);
-            show_grid(table);
+            checkup=0;
+            while(checkup!=1) {
+                printf("Jeton à supprimer 1 - %d", size + 2);
+                scanf("%d", &colonne_input);
+                if(valid_remove_colonne(colonne_input-1, table)==1){
+                    checkup = 1;
+                    removetoken(colonne_input-1, &table);
+                    show_grid(table);
+                    colonne_ban = colonne_input - 1;
+                }
+                else{if(valid_remove_colonne(colonne_input-1, table)==0)
+                    printf("La colonne est vide, choisir case valide\n");
+                }
+            }
         }else{
             if(action==3){
                 printf("Nom de sauvegarde?\n");

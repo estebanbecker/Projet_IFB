@@ -19,7 +19,7 @@ void bot(grid *table,int *ban_col){
 
         buffer1=rand()%(*table).side;//gener une colonne aléatoire
 
-        if((rand()%5)<4){
+        if((rand()%10)<8){
 
             if(valid_add_colonne(buffer1,*table) && buffer1!=*ban_col){//vérifie si l'action peut être effectué
                 addtoken('X',buffer1,table);

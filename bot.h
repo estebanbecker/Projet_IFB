@@ -7,6 +7,6 @@
 #include "table.h"
 
 
-void bot(grid *table,int ban_col);
+void bot(grid *table,int *ban_col);
 
 #endif //PROJET_IFB_BOT_H

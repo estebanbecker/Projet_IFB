@@ -2,6 +2,7 @@
 // Created by esteb on 25/05/2021.
 //
 #include <stdio.h>
+#include <stdlib.h>
 #include "table.h"
 
 
@@ -28,24 +29,25 @@ void save(char turn, int colonne_no,int type_partie, grid grille,char slot[30]){
 int load(char *turn,int * colonne_no, int * type_partie, grid * pgrille, char slot[30]){
 
     FILE* file= fopen(slot, "r");//Ouverture du fichier
+    char buffer_string[11];int buffer_int;//Memoire d'un string et d'un integrer
 
     if (file==NULL){
         printf("Fichier inexistant\n");
         return 0;//Vérifie que le fichier à bien été ouvert
     }else{
 
-        char buffer_string[11];int buffer_int;//Memoire d'un string et d'un integrer
+
 
         fgets(buffer_string,10,file); //Recuperation de la taille de la grille
-        sscanf((const char *) &buffer_string, "%d", &buffer_int);
+        buffer_int=atoi(buffer_string);
         new_grid(buffer_int,pgrille);//Creation de la grille
         *turn=fgetc(file);//Recuperation du tour de la personne qui doit jouer
         fgetc(file);
         fgets(buffer_string,5,file);//Recuperation du type de partie (JvJ ou IA)
-        sscanf((const char *) &buffer_string, "%d", type_partie);
+        *type_partie=atoi(buffer_string);
 
         fgets(buffer_string,5,file);//Recuperation de la colonne interdite
-        sscanf((const char *) &buffer_string, "%d", colonne_no);
+        *colonne_no= atoi(buffer_string);
 
         for (int i = 0; i < (*pgrille).side; ++i) {
 

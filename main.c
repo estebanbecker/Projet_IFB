@@ -62,7 +62,7 @@ int main() {
         if(botmode==0){
             turn='O';
             printf("Bot réfléchit...\n");
-            bot(&table, colonne_ban);
+            bot(&table, &colonne_ban);
         }else{
             if(botmode==1){
                 turn=changetoken(turn);

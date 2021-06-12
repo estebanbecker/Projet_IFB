@@ -38,9 +38,10 @@ int checkligne(char jeton, int n, int i, int input, grid table) {
     }
     if (aligned >= n) {
         printf("le joueur %c à Gagné\n", jeton);
+        printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            //lancer la fonction new game
+            return 1;
         } else {
             return -1;
         }
@@ -56,7 +57,7 @@ int checkligne(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            //lancer la fonction new game
+            return 1;
         } else {
             return -1;
         }
@@ -77,7 +78,7 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            //lancer la fonction new game
+            return 1;
         } else {
             return -1;
         }
@@ -95,7 +96,7 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            //lancer la fonction new game
+            return 1;
         } else {
             return -1;
         }
@@ -113,7 +114,7 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            //lancer la fonction new game
+            return 1;
         } else {
             return -1;
         }
@@ -131,7 +132,7 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            //lancer la fonction new game
+            return 1;
         } else {
             return -1;
         }
@@ -149,7 +150,7 @@ int checkcolonne(char jeton, int n, int i, int input, grid table) {
         printf("le joueur %c à Gagné\n", jeton);
         scanf("%d", &consent);
         if (consent == 1) {
-            //lancer la fonction new game
+            return 1;
         } else {
             return -1;
         }
@@ -165,7 +166,7 @@ int checkcolonne(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            //lancer la fonction new game
+            return 1;
         } else {
             return -1;
         }

@@ -21,7 +21,22 @@ int main() {
     int botmode=0;
 
 
-    printf("----- PUISSANCE N ----\n");
+    printf("                                                                                                                               \n"
+           ",-.----.                                                                        ,--.                                      ,--. \n"
+           "\\    /  \\                   ,---,  .--.--.    .--.--.      ,---,              ,--.'|  ,----..      ,---,.               ,--.'| \n"
+           "|   :    \\          ,--, ,`--.' | /  /    '. /  /    '.   '  .' \\         ,--,:  : | /   /   \\   ,'  .' |           ,--,:  : | \n"
+           "|   |  .\\ :       ,'_ /| |   :  :|  :  /`. /|  :  /`. /  /  ;    '.    ,`--.'`|  ' :|   :     :,---.'   |        ,`--.'`|  ' : \n"
+           ".   :  |: |  .--. |  | : :   |  ';  |  |--` ;  |  |--`  :  :       \\   |   :  :  | |.   |  ;. /|   |   .'        |   :  :  | | \n"
+           "|   |   \\ :,'_ /| :  . | |   :  ||  :  ;_   |  :  ;_    :  |   /\\   \\  :   |   \\ | :.   ; /--` :   :  |-,        :   |   \\ | : \n"
+           "|   : .   /|  ' | |  . . '   '  ; \\  \\    `. \\  \\    `. |  :  ' ;.   : |   : '  '; |;   | ;    :   |  ;/|        |   : '  '; | \n"
+           ";   | |`-' |  | ' |  | | |   |  |  `----.   \\ `----.   \\|  |  ;/  \\   \\'   ' ;.    ;|   : |    |   :   .'        '   ' ;.    ; \n"
+           "|   | ;    :  | | :  ' ; '   :  ;  __ \\  \\  | __ \\  \\  |'  :  | \\  \\ ,'|   | | \\   |.   | '___ |   |  |-,        |   | | \\   | \n"
+           ":   ' |    |  ; ' |  | ' |   |  ' /  /`--'  //  /`--'  /|  |  '  '--'  '   : |  ; .''   ; : .'|'   :  ;/|        '   : |  ; .' \n"
+           ":   : :    :  | : ;  ; | '   :  |'--'.     /'--'.     / |  :  :        |   | '`--'  '   | '/  :|   |    \\        |   | '`--'   \n"
+           "|   | :    '  :  `--'   \\;   |.'   `--'---'   `--'---'  |  | ,'        '   : |      |   :    / |   :   .'        '   : |       \n"
+           "`---'.|    :  ,      .-./'---'                          `--''          ;   |.'       \\   \\ .'  |   | ,'          ;   |.'       \n"
+           "  `---`     `--`----'                                                  '---'          `---`    `----'            '---'         \n"
+           "                                                                                                                               \n");
     printf("(1) Nouvelle partie? - ");
     printf("(2) Charger partie\n");
 
@@ -36,13 +51,17 @@ int main() {
     if(action==1){
         printf("Quelle taille puissance N\n");
         scanf("%d", &size);
-        printf("Voulez-vous jouer en mode ordinnateur (0) ou JvJ (1)\n");
-        scanf("%d", &botmode);
         fflush(stdin);
         while (size<=3){
             printf("Veuillez entrer une valeur superieur a 3: ");
             scanf("%d", &size);
             fflush(stdin);
+        }
+        printf("Voulez-vous jouer en mode ordinnateur (0) ou JvJ (1)\n");
+        scanf("%d", &botmode);
+        while (botmode>1 || botmode<0){
+            printf("Entez une valeur valide");
+            scanf("%d", &botmode);
         }
 
         new_grid(size+2,&table);
@@ -69,9 +88,9 @@ int main() {
             }
         }
         show_grid(table);
-        printf("(1) Jouer jeton? - ");
-        printf("(2) Effacer jeton? - ");
-        printf("(3) Sauvegarder\n");
+        printf("| (1) Jouer jeton?   ");
+        printf(" (2) Effacer jeton? ");
+        printf(" (3) Sauvegarder?  |\n");
 
         scanf("%d", &action);
         fflush(stdin);
@@ -134,4 +153,6 @@ int main() {
             }
         }
     }
+    printf("Rejouer?\n");
+    scanf("%d", &action);
 }

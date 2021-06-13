@@ -13,3 +13,4 @@ int checkwinner(char jeton, int n, int i, int input, grid table);
 int checkligne(char jeton, int n, int i, int input, grid table);
 int checkdiag(char jeton, int n, int i, int input, grid table);
 int checkcolonne(char jeton, int n, int i, int input, grid table);
+int restart(grid table);

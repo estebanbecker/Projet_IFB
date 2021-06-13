@@ -3,6 +3,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "checkwinner.h"
 #include "table.h"
 
@@ -41,9 +42,9 @@ int checkligne(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            return 1;
+            restart(table);
         } else {
-            return -1;
+            exit(0);
         }
     }
     aligned = 0;
@@ -57,9 +58,9 @@ int checkligne(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            return 1;
+            restart(table);
         } else {
-            return -1;
+            exit(0);
         }
     }
 } //n le mode de jeu sélectionné par l'utilisateur
@@ -78,9 +79,9 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            return 1;
+            restart(table);
         } else {
-            return -1;
+            exit(0);
         }
     }
     bufferx = input;
@@ -96,9 +97,9 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            return 1;
+            restart(table);
         } else {
-            return -1;
+            exit(0);
         }
     }
     aligned = 0;
@@ -114,9 +115,9 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            return 1;
+            restart(table);
         } else {
-            return -1;
+            exit(0);
         }
     }
     bufferx = input;
@@ -132,9 +133,9 @@ int checkdiag(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            return 1;
+            restart(table);
         } else {
-            return -1;
+            exit(0);
         }
     }
 }
@@ -150,9 +151,9 @@ int checkcolonne(char jeton, int n, int i, int input, grid table) {
         printf("le joueur %c à Gagné\n", jeton);
         scanf("%d", &consent);
         if (consent == 1) {
-            return 1;
+            restart(table);
         } else {
-            return -1;
+            exit(0);
         }
     }
     aligned = 0;
@@ -166,9 +167,23 @@ int checkcolonne(char jeton, int n, int i, int input, grid table) {
         printf("Rejouer? 1/0\n");
         scanf("%d", &consent);
         if (consent == 1) {
-            return 1;
+            restart(table);
         } else {
-            return -1;
+            exit(0);
         }
     }
+}
+
+int restart(grid table){
+    int j=0;
+    int i=0;
+    while(j<table.side) {
+            table.data[i][j] = '-';
+            i=i+1;
+            if(i==table.side-1){
+                table.data[i][j] = '-';
+                j=j+1;
+                i=0;
+            }
+        }
 }

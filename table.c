@@ -84,17 +84,5 @@ void show_grid(grid table){
 
 }
 
-void del_grid(grid * table){
-
-
-
-        for (int i = 0; i < (*table).side; ++i) {
-
-            free((*table).data[i]);
-
-        }
-
-        free((*table).data);
-
-
+void del_grid(grid * table, side){
 }

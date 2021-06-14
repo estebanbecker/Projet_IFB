@@ -84,5 +84,5 @@ void show_grid(grid table){
 
 }
 
-void del_grid(grid * table, side){
+void del_grid(grid * table){
 }
